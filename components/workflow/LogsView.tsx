@@ -74,7 +74,7 @@ export function LogsView({ workflowId }: { workflowId: string | null }) {
                                     <Clock className="w-3 h-3" />
                                     {new Date(log.created_at).toLocaleString()}
                                 </td>
-                                <td className="p-4 font-mono text-[11px] max-w-[150px] truncate align-top">
+                                <td className="p-4 font-mono text-[11px] max-w-[150px] truncate align-top whitespace-nowrap">
                                     {log.input_data}
                                 </td>
                                 <td className="p-4 max-w-[300px] align-top">
