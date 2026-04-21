@@ -7,7 +7,6 @@ import { ThemeSupa } from "@supabase/auth-ui-shared"
 import { LogOut, User, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-// Replace with your project credentials
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ""
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
 const supabase = createClient(supabaseUrl, supabaseAnonKey)
@@ -32,6 +31,7 @@ export default function AuthComponent({ children }: { children: React.ReactNode 
     if (loading) return null
 
     if (!session) {
+        // @ts-ignore
         return (
             <div className="flex items-center justify-center min-h-screen bg-background p-4">
                 <div className="w-full max-w-[400px] bg-card border rounded-xl shadow-lg p-8">

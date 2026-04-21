@@ -64,25 +64,25 @@ export function LogsView({ workflowId }: { workflowId: string | null }) {
                     </thead>
                     <tbody className="divide-y text-sm">
                     {loading ? (
-                        <tr><td colSpan={4} className="p-8 text-center text-muted-foreground">Loading logs...</td></tr>
+                        <tr><td colSpan={4} className="p-8 text-center text-muted-foreground align-top">Loading logs...</td></tr>
                     ) : logs.length === 0 ? (
-                        <tr><td colSpan={4} className="p-8 text-center text-muted-foreground">No executions yet.</td></tr>
+                        <tr><td colSpan={4} className="p-8 text-center text-muted-foreground align-top">No executions yet.</td></tr>
                     ) : (
                         logs.map((log) => (
                             <tr key={log.id} className="hover:bg-muted/30 transition-colors">
-                                <td className="p-4 whitespace-nowrap text-muted-foreground flex items-center gap-2">
+                                <td className="p-4 whitespace-nowrap align-top text-muted-foreground flex items-center gap-2">
                                     <Clock className="w-3 h-3" />
                                     {new Date(log.created_at).toLocaleString()}
                                 </td>
-                                <td className="p-4 font-mono text-[11px] max-w-[150px] truncate">
+                                <td className="p-4 font-mono text-[11px] max-w-[150px] truncate align-top">
                                     {log.input_data}
                                 </td>
-                                <td className="p-4 max-w-[300px]">
+                                <td className="p-4 max-w-[300px] align-top">
                                     <div className="bg-slate-900 text-slate-200 p-2 rounded text-[11px] leading-relaxed break-words font-mono">
                                         {log.output_data}
                                     </div>
                                 </td>
-                                <td className="p-4">
+                                <td className="p-4 align-top">
                                     <div className="flex items-center gap-1.5 text-emerald-600 font-bold text-[10px] uppercase">
                                         <CheckCircle2 className="w-3 h-3" />
                                         {log.status}
