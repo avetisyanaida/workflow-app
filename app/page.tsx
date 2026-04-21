@@ -12,7 +12,7 @@ export default function WorkflowBuilder() {
 
     return (
         <AuthComponent>
-            <div className="h-screen flex bg-background overflow-hidden">
+            <div className="h-screen flex bg-background">
                 <Sidebar
                     activeTab={activeTab}
                     onTabChange={setActiveTab}
