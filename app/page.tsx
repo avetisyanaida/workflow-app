@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Sidebar } from "@/components/workflow/sidebar"
 import { WorkflowCanvas } from "@/components/workflow/workflow-canvas"
 import { LogsView } from "@/components/workflow/LogsView"
-import AuthComponent from "@/components/AuthComponent.tsx";
+import AuthComponent from "@/components/AuthComponent";
 
 export default function WorkflowBuilder() {
     const [activeTab, setActiveTab] = useState("Canvas")

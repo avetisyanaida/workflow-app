@@ -47,16 +47,17 @@ export default function AuthComponent({ children }: { children: React.ReactNode 
                         supabaseClient={supabase}
                         appearance={{
                             theme: ThemeSupa,
+                            style: {
+                                button: { borderRadius: '8px', padding: '10px' },
+                                input: { borderRadius: '8px' },
+                                anchor: { color: 'hsl(var(--primary))' },
+                            },
                             variables: {
                                 default: {
                                     colors: {
                                         brand: 'hsl(var(--primary))',
                                         brandAccent: 'hsl(var(--primary))',
                                     },
-                                    radii: {
-                                        buttonRadius: '8px',
-                                        inputRadius: '8px',
-                                    }
                                 }
                             }
                         }}
